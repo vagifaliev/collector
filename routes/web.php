@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'index', function () {
+    return view('index');
+}]);
+
+Route::get('/contact', ['as' => 'contact', function () {
+    return view('contact');
+}]);
+
+Route::get('/courses', ['as' => 'courses', function () {
+    return view('courses');
+}]);
+
+Route::get('/blog', ['as' => 'blog', function () {
+    return view('blog');
+}]);
